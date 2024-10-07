@@ -36,3 +36,179 @@
     transform: rotate(360deg);
   }
 }
+.app-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.app-title {
+  text-align: center;
+  color: #333;
+}
+
+.rtsp-input-container {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.rtsp-label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.rtsp-input {
+  width: 400px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.livestream-container {
+  position: relative;
+  width: 50%;
+  height: 480px;
+margin-left: 20%;
+  
+}
+
+.livestream-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  border-radius: 5px;
+}
+
+
+.overlay {
+  border: 1px solid #333;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9));
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+  cursor: move;
+  position: absolute; /* Ensure it's positioned correctly within the livestream */
+  z-index: 1; /* Ensure it’s above other elements */
+}
+
+
+.overlay:hover {
+  transform: scale(1.05);
+}
+
+.overlay-list-container {
+  margin-top: 20px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.overlay-list-title {
+  margin: 0 0 10px 0;
+}
+
+.overlay-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.overlay-list-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.delete-button {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+  background-color: #c9302c;
+}
+.add-overlay-form {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center align form items */
+  margin: 20px; /* Add margin for spacing */
+  padding: 15px; /* Add padding for comfort */
+  background-color: #fff; /* Background color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.add-overlay-input {
+  width: 300px; /* Fixed width for inputs */
+  padding: 10px; /* Padding for better UX */
+  margin: 10px 0; /* Space between inputs */
+  border: 1px solid #ccc; /* Border style */
+  border-radius: 5px; /* Rounded corners for inputs */
+  transition: border-color 0.3s; /* Transition for border color */
+}
+
+.add-overlay-input:focus {
+  border-color: #66afe9; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+.add-overlay-button {
+  padding: 10px 15px; /* Padding for button */
+  background-color: #5cb85c; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners for button */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.3s; /* Transition for background color */
+}
+
+.add-overlay-button:hover {
+  background-color: #4cae4c; /* Darker green on hover */
+}
+.modal {
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
