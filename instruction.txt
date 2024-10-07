@@ -1,0 +1,38 @@
+
+### Deployment Instructions for the RTSP Application
+
+**Step 1: Install Node.js on Your Device**  
+Ensure that Node.js is installed on your machine. If not, you can download and install it from the [official Node.js website](https://nodejs.org/).
+
+**Step 2: Install Dependencies**  
+Navigate to both the `Rstp/` and `Backend/` directories and run the following command to install all necessary dependencies:
+
+```bash
+# In the Rstp directory
+cd /path/to/Rstp/
+npm install
+
+# In the Backend directory
+cd /path/to/Backend/
+npm install
+```
+
+**Step 3: Start the React Application**  
+Once the dependencies are installed, start the React application by executing the following command in the `Rstp/` directory:
+
+```bash
+npm start
+```
+
+**Step 4: Start the Backend Server**  
+In a separate terminal, navigate to the `Backend/` directory and start the backend server using the following command:
+
+```bash
+cd /path/to/Backend/
+node app.js
+```
+
+**Testing the Application**  
+Once both the frontend and backend servers are running, you can test the application by visiting the following URL in your web browser:
+
+[RTSP Test Stream](https://rtsp.me/embed/hQZz7DsK/)
