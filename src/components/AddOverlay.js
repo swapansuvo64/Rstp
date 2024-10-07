@@ -22,7 +22,7 @@ const AddOverlay = ({ setOverlays, overlays }) => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/overlays', formData);
+      const response = await axios.post('http://15.207.100.237:5000/api/overlays', formData);
       console.log(response.data);
 
       // Update the overlays list in the parent component

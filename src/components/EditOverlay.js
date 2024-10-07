@@ -24,7 +24,7 @@ const EditOverlay = ({ overlay, onClose, onUpdate }) => {
     };
   
     try {
-      await axios.put(`http://localhost:5000/api/overlays/${overlay._id}`, updatedOverlayData);
+      await axios.put(`http://15.207.100.237:5000/api/overlays/${overlay._id}`, updatedOverlayData);
       onUpdate(updatedOverlayData); // Pass the updated overlay to the parent
       onClose(); // Close the modal after updating
     } catch (error) {

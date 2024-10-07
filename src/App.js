@@ -19,7 +19,7 @@ const App = () => {
   useEffect(() => {
     const fetchOverlays = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/overlays');
+        const response = await axios.get('http://15.207.100.237:5000/api/overlays');
         setOverlays(response.data);
       } catch (error) {
         console.error('Error fetching overlays:', error);
@@ -38,7 +38,7 @@ const App = () => {
     }
 
     try {
-      await axios.delete(`http://localhost:5000/api/overlays/${id}`);
+      await axios.delete(`http://15.207.100.237:5000/api/overlays/${id}`);
       console.log(`Overlay with ID ${id} deleted successfully`);
       setOverlays((prevOverlays) => prevOverlays.filter(overlay => overlay._id !== id));
     } catch (error) {
@@ -61,7 +61,7 @@ const App = () => {
     console.log('Updating overlay position with data:', updatedOverlayData);
 
     try {
-      await axios.put(`http://localhost:5000/api/overlays/${overlay._id}`, updatedOverlayData);
+      await axios.put(`http://15.207.100.237:5000/api/overlays/${overlay._id}`, updatedOverlayData);
       console.log('Overlay position updated successfully:', updatedOverlayData);
       setOverlays((prevOverlays) =>
         prevOverlays.map(o => (o._id === overlay._id ? updatedOverlayData : o))
@@ -139,7 +139,7 @@ const App = () => {
               >
                 {imageUrl ? (
                   <img 
-  src={`http://localhost:5000${imageUrl}`} // Prepend the base URL
+  src={`http://15.207.100.237:5000${imageUrl}`} // Prepend the base URL
   alt="Overlay" 
   style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
 />
