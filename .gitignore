@@ -4,9 +4,9 @@ npm-debug.log
 yarn-error.log
 
 # Build artifacts
-build/
+
 dist/
-public/build/
+public
 public/static/
 
 # Environment Variables
